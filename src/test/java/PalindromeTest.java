@@ -2,8 +2,7 @@ import org.example.Palindrome;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PalindromeTest {
     Palindrome palindrome;
@@ -16,14 +15,16 @@ public class PalindromeTest {
     @Test
     public void isPalindromeString() {
         assertTrue(palindrome.checkPalindromeString("ABA"));
-        assertTrue(palindrome.checkPalindromeString("ABA"));
+        assertTrue(palindrome.checkPalindromeString("level"));
+        assertTrue(palindrome.checkPalindromeString("madam"));
+        assertTrue(palindrome.checkPalindromeString("radar"));
     }
 
     @Test
     public void isPalindromeNumber() {
-        assertTrue(palindrome.checkPalindromeString("111"));
-        assertTrue(palindrome.checkPalindromeString("222"));
-        assertTrue(palindrome.checkPalindromeString("1010"));
-        assertTrue(palindrome.checkPalindromeString("233"));
+        assertAll(()-> assertTrue(palindrome.checkPalindromeNumber(11)),
+                () -> assertTrue(palindrome.checkPalindromeNumber(222)),
+                () -> assertTrue(palindrome.checkPalindromeNumber(505)),
+                () -> assertFalse(palindrome.checkPalindromeNumber(233)));
     }
 }
