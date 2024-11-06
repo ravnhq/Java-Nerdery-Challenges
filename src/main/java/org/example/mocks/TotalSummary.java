@@ -1,3 +1,4 @@
+/* (C)2024 */
 package org.example.mocks;
 
 import java.util.List;
@@ -36,5 +37,4 @@ public class TotalSummary {
         this.totalCalls = totalCalls;
         this.totalCost = totalCost;
     }
-
 }

@@ -1,3 +1,4 @@
+/* (C)2024 */
 package org.example;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ public class Fibonacci {
 
     public Integer fibonacci(int n) {
         // Base case: if n is 0 or 1, return n
-        if (n <= 1){
+        if (n <= 1) {
             return n;
         }
 
@@ -17,7 +18,7 @@ public class Fibonacci {
 
     public List<Integer> finonacciList(int n) {
         List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             list.add(fibonacci(i));
         }
         return list;

@@ -1,3 +1,4 @@
+/* (C)2024 */
 package org.example;
 
 public class Main {

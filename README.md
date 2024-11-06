@@ -7,7 +7,7 @@
 1. Run `mvn clean install` in your terminar in the root of this repo
 1. Modify the code ONLY in the sections flagged as `// YOUR CODE HERE...`
 
-## JavaScript Algorithms
+## Java Algorithms
 
 In the file `Java-Algorithms/challenges.java` you will five different challenges,
 please complete them in order and don't skip any.

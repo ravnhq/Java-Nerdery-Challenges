@@ -1,6 +1,7 @@
+/* (C)2024 */
 package org.example.mocks;
 
-public class CallSummary{
+public class CallSummary {
     public CallSummary(CallCostObject callCostObject, Double totalCost) {
         this.callCostObject = callCostObject;
         this.totalCost = totalCost;
@@ -24,6 +25,4 @@ public class CallSummary{
 
     CallCostObject callCostObject;
     Double totalCost;
-
-
 }

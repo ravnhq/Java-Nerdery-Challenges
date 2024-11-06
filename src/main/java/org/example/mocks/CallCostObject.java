@@ -1,3 +1,4 @@
+/* (C)2024 */
 package org.example.mocks;
 
 public class CallCostObject {
