@@ -4,7 +4,7 @@
 
 1. Fork this repo to your account
 1. Before you start making changes create a new `develop` branch (`git checkout -b develop`)
-1. Run `yarn` in your terminar in the root of this repo
+1. Run `mvn clean install` in your terminar in the root of this repo
 1. Modify the code ONLY in the sections flagged as `// YOUR CODE HERE...`
 
 ## JavaScript Algorithms
