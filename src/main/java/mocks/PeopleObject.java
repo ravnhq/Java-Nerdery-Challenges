@@ -1,15 +1,15 @@
-package org.example.mocks;
+/* (C)2024 */
+package mocks;
 
 public class PeopleObject {
 
-    public PeopleObject(String name, String lastname,Integer age, Integer weight,Integer height) {
+    public PeopleObject(String name, String lastname, Integer age, Integer weight, Integer height) {
         this.name = name;
         this.height = height;
         this.weight = weight;
         this.age = age;
         this.lastname = lastname;
     }
-
 
     String name;
     String lastname;

@@ -1,6 +1,4 @@
 /* (C)2024 */
-package org.example;
-
 public class Challenges {
 
     /* *****
@@ -40,9 +38,8 @@ public class Challenges {
     Invoking "circularArray(2)" should return "["Island", "Japan", "Israel", "Germany", "Norway"]"
     ***** */
 
-    String[] COUNTRY_NAMES = {"Germany", "Norway", "Island", "Japan", "Israel"};
-
     public String[] circularArray(int index) {
+        String[] COUNTRY_NAMES = {"Germany", "Norway", "Island", "Japan", "Israel"};
         // YOUR CODE HERE...
         return COUNTRY_NAMES;
     }
@@ -68,9 +65,9 @@ public class Challenges {
     The last 3 digits for the sum of powers from 1 to 10 is "317"
     ***** */
 
-    public Integer ownPower(int number, int lastDigits) {
+    public String ownPower(int number, int lastDigits) {
         // YOUR CODE HERE...
-        return 1;
+        return "";
     }
     ;
 

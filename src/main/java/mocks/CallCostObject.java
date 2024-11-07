@@ -1,5 +1,5 @@
 /* (C)2024 */
-package org.example.mocks;
+package mocks; /* (C)2024 */
 
 public class CallCostObject {
 

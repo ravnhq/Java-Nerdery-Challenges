@@ -1,14 +1,11 @@
-package org.example;
-
-import org.example.mocks.CallCostObject;
-import org.example.mocks.CallSummary;
-import org.example.mocks.TotalSummary;
-
+/* (C)2024 */
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
+import mocks.CallCostObject;
+import mocks.CallSummary;
+import mocks.TotalSummary;
 
-public class CallCost {
+public class ChallengeStream {
 
     /**
      * Design a solution to calculate what to pay for a set of phone calls. The function must receive an
@@ -30,18 +27,36 @@ public class CallCost {
      */
     public TotalSummary calculateCost(List<CallCostObject> costObjectList) {
 
-        int totalCalls = costObjectList.stream().filter(obj -> Objects.equals(obj.getType(), "National") || Objects.equals(obj.getType(), "International") || Objects.equals(obj.getType(), "Local")).toList().size();
+        int totalCalls =
+                costObjectList.stream()
+                        .filter(
+                                obj ->
+                                        Objects.equals(obj.getType(), "National")
+                                                || Objects.equals(obj.getType(), "International")
+                                                || Objects.equals(obj.getType(), "Local"))
+                        .toList()
+                        .size();
 
-        List<CallCostObject> validCalss = costObjectList.stream().filter(obj -> Objects.equals(obj.getType(), "National") || Objects.equals(obj.getType(), "International") || Objects.equals(obj.getType(), "Local")).toList();
+        List<CallCostObject> validCalss =
+                costObjectList.stream()
+                        .filter(
+                                obj ->
+                                        Objects.equals(obj.getType(), "National")
+                                                || Objects.equals(obj.getType(), "International")
+                                                || Objects.equals(obj.getType(), "Local"))
+                        .toList();
 
-        List<CallSummary> summaryList = validCalss.stream().map(call -> new CallSummary(call,calculateCallCost(call))).toList();
+        List<CallSummary> summaryList =
+                validCalss.stream()
+                        .map(call -> new CallSummary(call, calculateCallCost(call)))
+                        .toList();
 
         Double totalCost = summaryList.stream().mapToDouble(CallSummary::getTotalCost).sum();
 
-        return new TotalSummary(summaryList,totalCalls,totalCost);
-
+        return new TotalSummary(summaryList, totalCalls, totalCost);
     }
-    Double calculateCallCost(CallCostObject call){
+
+    Double calculateCallCost(CallCostObject call) {
         switch (call.getType()) {
             case "International" -> {
                 if (call.getDuration() - 3 <= 0) {
@@ -64,5 +79,3 @@ public class CallCost {
         return 0.0;
     }
 }
-
-

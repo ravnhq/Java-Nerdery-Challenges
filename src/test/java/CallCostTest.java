@@ -4,18 +4,17 @@ import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.example.CallCost;
-import org.example.mocks.CallCostMock;
+import mocks.CallCostMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CallCostTest {
-    CallCost callCost;
+    ChallengeStream callCost;
     CallCostMock callCostMock;
 
     @BeforeEach
     void setUp() {
-        callCost = new CallCost();
+        callCost = new ChallengeStream();
         callCostMock = new CallCostMock();
     }
 
